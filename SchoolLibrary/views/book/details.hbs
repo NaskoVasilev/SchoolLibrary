@@ -1,0 +1,22 @@
+<h1>Welcome to SoftUni Wiki!</h1>
+<div class="spacer">
+    <h2>{{title}}
+        <div class="controls">
+           {{#if currentUser}}
+               {{#if isAdmin}}
+                   <a href="/book/edit/{{_id}}">[edit]</a>
+                   <a href="/book/delete/{{_id}}">[delete]</a>
+               {{/if}}
+           {{/if}}
+
+        </div>
+    </h2>
+    <article>
+        <img src="{{image}}" alt="">
+        <div>
+            <h3>Author: {{author}}</h3>
+            <h3>Genre: {{genre}}</h3>
+            <p>{{description}}</p>
+        </div>
+    </article>
+</div>

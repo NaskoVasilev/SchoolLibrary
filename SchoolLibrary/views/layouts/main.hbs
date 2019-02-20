@@ -16,14 +16,13 @@
 
         <nav>
             <a href="/">Main Page</a>
-            <a href="/article/latest">Latest Article</a>
-            <a href="/article/all">All Articles</a>
-            <form method="post" action="/article/search">
+            <a href="/book/all">All Books</a>
+            <form method="post" action="/book/search">
                 <input type="text" name="criteria">
                 <input type="submit" value="Search">
             </form>
             {{#if currentUser}}
-                <a href="/article/create">Create New Article</a>
+                <a href="/book/create">Create New Book</a>
             {{/if}}
         </nav>
     </aside>

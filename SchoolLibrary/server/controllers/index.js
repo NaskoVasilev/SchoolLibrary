@@ -1,9 +1,9 @@
 const home = require('./home-controller')
 const users = require('./users-controller')
-//const article = require('./article-controller')
+const book = require('./book-controller')
 
 module.exports = {
     home: home,
     users: users,
-    //article: article
+    book: book
 }

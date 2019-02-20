@@ -1,5 +1,7 @@
 const controllers = require('../controllers')
 const auth = require('./auth')
+const multer = require('multer')
+let upload = multer({ dest: './public/images' })
 
 module.exports = (app) => {
     app.get('/', controllers.home.index);
@@ -10,21 +12,14 @@ module.exports = (app) => {
     app.post('/users/login', controllers.users.loginPost);
     app.get('/users/logout', controllers.users.logout);
 
-    // app.get('/article/create',auth.isAuthenticated, controllers.article.createGet)
-    // app.post('/article/create',auth.isAuthenticated, controllers.article.createPost)
-    // app.get('/article/all',controllers.article.getAll)
-    // app.get('/article/details/:id',controllers.article.articleDeatils)
+    app.get('/book/create', auth.isAuthenticated, controllers.book.createGet)
+    app.post('/book/create',upload.single('image'), auth.isAuthenticated, controllers.book.createPost)
+    app.get('/book/all',controllers.book.getAll)
+    app.get('/book/details/:id',controllers.book.bookDetails)
     //
-    // app.get('/article/edit/:id',auth.isAuthenticated,controllers.article.editGet);
-    // app.post('/article/edit/:id',auth.isAuthenticated,controllers.article.editPost);
-    // app.get('/article/history/:id',auth.isAuthenticated,controllers.article.getHistory)
-    // app.get('/article/editDetails/:id',auth.isAuthenticated,controllers.article.showEdit)
-    //
-    // app.get('/article/lock/:id',auth.isInRole('Admin'),controllers.article.lockArticle)
-    // app.get('/article/unlock/:id',auth.isInRole('Admin'),controllers.article.unlockArticle)
-    //
-    // app.get('/article/latest',controllers.article.getLatestArticle);
-    // app.post('/article/search',controllers.article.search);
+    app.get('/book/edit/:id',auth.isAuthenticated,controllers.book.editGet);
+    app.post('/book/edit/:id',auth.isAuthenticated,controllers.book.editPost);
+    // app.post('/book/search',controllers.book.search);
     app.all('*', (req, res) => {
         res.status(404)
         res.send('404 Not Found!')

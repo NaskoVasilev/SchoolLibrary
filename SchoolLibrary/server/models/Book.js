@@ -5,6 +5,7 @@ let bookSchema = new mongoose.Schema({
     author: {type: String, required: "Author is required!"},
     description: {type: String},
     genre: {type: String, required: "Genre is required!"},
+    image: {type: String, required: "Image is required"}
 })
 
 let Book = mongoose.model('Book', bookSchema);

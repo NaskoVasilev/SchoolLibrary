@@ -1,0 +1,18 @@
+<h1>Welcome to SoftUni Wiki!</h1>
+<section>
+    <h2>Create new article</h2>
+    <div class="spacer">
+        <form method="post" enctype="multipart/form-data">
+            <label>Book title</label>
+            <input type="text" class="title" name="title" value="{{title}}">
+            <label>Author</label>
+            <input type="text" class="title" name="author" value="{{author}}">
+            <label>Genre</label>
+            <input type="text" class="title" name="genre" value="{{genre}}">
+            <label>Description</label>
+            <textarea name="description" >{{description}}</textarea>
+            <input type="file" name="image" accept=".jpg,.jpeg,.png">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
