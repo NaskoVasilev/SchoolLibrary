@@ -10,6 +10,8 @@ let userSchema = new mongoose.Schema({
     class: {type: Number},
     numberInClass: {type: Number},
     takenBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default: []}],
+    favouriteBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default:[]},],
+    readBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default:[]},],
     roles: [{type: String, default: []}]
 })
 

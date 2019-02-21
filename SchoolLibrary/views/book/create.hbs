@@ -1,18 +1,16 @@
-<h1>Welcome to SoftUni Wiki!</h1>
-<section>
-    <h2>Create new article</h2>
-    <div class="spacer">
-        <form method="post" enctype="multipart/form-data">
-            <label>Book title</label>
-            <input type="text" class="title" name="title" value="{{title}}">
-            <label>Author</label>
-            <input type="text" class="title" name="author" value="{{author}}">
-            <label>Genre</label>
-            <input type="text" class="title" name="genre" value="{{genre}}">
-            <label>Description</label>
-            <textarea name="description" >{{description}}</textarea>
-            <input type="file" name="image" accept=".jpg,.jpeg,.png">
-            <input type="submit" value="Submit">
+<div class="wrapper fadeInDown" id="register-form">
+    <div id="formContent">
+        <h2 class="active">Add new book</h2>
+
+        <form method="post" class="form">
+            <input type="text" class="fadeIn second" name="title" value="{{title}}" placeholder="Title">
+            <input type="text" class="fadeIn second" name="author" value="{{author}}" placeholder="Author">
+            <input type="text" class="fadeIn second" name="genre" value="{{genre}}" placeholder="Genre">
+            <input type="text" class="fadeIn third" name="publisher" value="{{publisher}}" placeholder="Publisher">
+            <textarea class="fadeIn third" name="description" placeholder="Description">{{description}}</textarea>
+            <input id="file" type="file" class="fadeIn third" name="image" accept=".jpg,.jpeg,.png">
+            <label for="file" class="fadeIn third">Choose photo</label>
+            <input type="submit" class="fadeIn fourth" value="Add">
         </form>
     </div>
-</section>
+</div>
