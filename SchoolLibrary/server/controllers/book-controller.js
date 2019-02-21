@@ -81,11 +81,90 @@ module.exports = {
             res.render('book/edit', {error: err.message})
         }
     },
-    getAll: async (req, res)=>{
+    getAll: async (req, res) => {
         let books = await Book.find();
         res.render('book/all', {books: books})
-    }
+    },
+    deleteGet: async (req, res) => {
+        let id = req.params.id;
 
+        try {
+            let book = await Book.findById(id);
+            res.render('book/delete', book)
+        } catch (err) {
+            console.log(err.message)
+        }
+    },
+    deletePost: async (req, res) => {
+        let id = req.params.id;
+
+        try {
+            await Book.findByIdAndRemove(id);
+            res.redirect('/')
+        } catch (err) {
+            console.log(err.message)
+        }
+    },
+
+    addToFavourite: async (req, res) => {
+        let bookId = req.params.bookId
+        let userId = req.user.id
+        let index = req.user.favouriteBooks.indexOf(bookId)
+
+        if (index === -1) {
+            req.user.favouriteBooks.push(bookId)
+        }
+
+        await User.findByIdAndUpdate(userId, {$set: req.user})
+        res.redirect('/book/details/' + bookId)
+    },
+
+    removeFromFavourites: async (req, res) => {
+        let bookId = req.params.bookId
+        let userId = req.user.id
+        let bookIndex = req.user.favouriteBooks.indexOf(bookId)
+        if (bookIndex !== -1) {
+            req.user.favouriteBooks.splice(bookIndex, 1)
+            await User.findByIdAndUpdate(userId, {$set: req.user})
+        }
+
+        res.redirect('/book/details/' + bookId)
+    },
+    getFavouriteBooks: async (req, res) => {
+        let user = await User.findById(req.user.id).populate('favouriteBooks')
+        res.render('book/favouriteBooks', {books: user.favouriteBooks})
+    },
+    addToReadBooks: async (req, res) => {
+        let bookId = req.params.id
+        let userId = req.user.id
+
+        let bookIndex = req.user.readBooks.indexOf(bookId)
+        console.log(bookIndex)
+        if (bookIndex == -1) {
+            req.user.readBooks.push(bookId)
+            await User.findByIdAndUpdate(userId, {$set: req.user})
+        }
+        res.redirect('/book/details/' + bookId)
+    },
+    getReadBooks: async (req, res) => {
+        let user = await User.findById(req.user.id).populate('readBooks')
+        res.render('book/readBooks', {books: user.readBooks})
+    },
+    getTakenBooks: async (req, res) => {
+        let user = await User.findById(req.user.id).populate('takenBooks')
+        res.render('book/takenBooks', {books: user.takenBooks})
+    },
+    removeFromReadBooks: async (req, res) => {
+        let bookId = req.params.id
+        let userId = req.user.id
+        let bookIndex = req.user.readBooks.indexOf(bookId)
+        if (bookIndex != -1) {
+            req.user.readBooks.splice(bookIndex, 1)
+            await User.findByIdAndUpdate(userId, {$set: req.user})
+        }
+
+        res.redirect('/book/details/' + bookId)
+    }
 
 // search: async (req, res) => {
 //     let criteria = req.body.criteria.toLowerCase();

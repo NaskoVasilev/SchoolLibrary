@@ -9,9 +9,9 @@ let userSchema = new mongoose.Schema({
     lastName: {type: String, required: "Last name is required!"},
     class: {type: Number},
     numberInClass: {type: Number},
-    takenBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default: []}],
-    favouriteBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default:[]},],
-    readBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Books', default:[]},],
+    takenBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Book', default: []}],
+    favouriteBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Book', default:[]}],
+    readBooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Book', default:[]}],
     roles: [{type: String, default: []}]
 })
 

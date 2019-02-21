@@ -1,0 +1,14 @@
+<section>
+    <h2>Read books</h2>
+    {{#each books}}
+        <article>
+            <img src="{{image}}" alt="">
+            <div>
+                <h3>Author: {{author}}</h3>
+                <h3>Genre: {{genre}}</h3>
+                <p>{{description}}</p>
+            </div>
+            <a href="/user/remove/book/read/{{_id}}">Remove from read books</a>
+        </article>
+    {{/each}}
+</section>

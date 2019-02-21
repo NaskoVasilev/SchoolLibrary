@@ -2,12 +2,12 @@
 <div class="spacer">
     <h2>{{title}}
         <div class="controls">
-           {{#if currentUser}}
-               {{#if isAdmin}}
-                   <a href="/book/edit/{{_id}}">[edit]</a>
-                   <a href="/book/delete/{{_id}}">[delete]</a>
-               {{/if}}
-           {{/if}}
+            {{#if currentUser}}
+                {{#if isAdmin}}
+                    <a href="/book/edit/{{_id}}">[edit]</a>
+                    <a href="/book/delete/{{_id}}">[delete]</a>
+                {{/if}}
+            {{/if}}
 
         </div>
     </h2>
@@ -19,4 +19,10 @@
             <p>{{description}}</p>
         </div>
     </article>
+    {{#if currentUser}}
+        <div class="buttons">
+            <a href="/user/add/favourite/{{_id}}">Add to Favourite</a>
+            <a href="/user/add/book/read/{{_id}}">Add to read books</a>
+        </div>
+    {{/if}}
 </div>

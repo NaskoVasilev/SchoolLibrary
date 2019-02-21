@@ -1,0 +1,13 @@
+<section>
+    <h2>Taken books</h2>
+    {{#each books}}
+        <article>
+            <img src="{{image}}" alt="">
+            <div>
+                <h3>Author: {{author}}</h3>
+                <h3>Genre: {{genre}}</h3>
+                <p>{{description}}</p>
+            </div>
+        </article>
+    {{/each}}
+</section>
