@@ -5,48 +5,72 @@
     <meta charset="UTF-8">
     <title>Book library</title>
     <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/dropDownMenu.css">
 </head>
 
 <body>
-<div>
-    <aside>
-        <div class="center">
-            <img class="logo" src="/img/logo.png" alt="logo">
-        </div>
-
-        <nav>
-            <a href="/">Main Page</a>
-            <a href="/book/all">All Books</a>
-            <form method="post" action="/book/search">
-                <input type="text" name="criteria">
-                <input type="submit" value="Search">
-            </form>
-            {{#if currentUser}}
-                <a href="/book/create">Create New Book</a>
-            {{/if}}
+    <header>
+        <nav id="main-menu">
+            <ul>
+                <li id="menu" class="active has-sub"><a href="#"><span>Mneu</span></a>
+                    <ul>
+                        <li class="has-sub"><a href="#"><span>Taken books</span></a></li>
+                        <li class="has-sub"><a href="#"><span>Favoiurite books</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="/"><span>Home</span></a></li>
+                {{#if currentUser}}
+                    <li><span>Welcome, {{currentUser.username}}!</span></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/users/register">Register</a></li>
+                {{/if}}
+            </ul>
         </nav>
-    </aside>
-    <div id="container">
-        <header>
-            {{#if currentUser}}
-                <span>Welcome, {{currentUser.username}}!</span>
-                <a href="/users/logout">[Logout]</a>
-            {{else}}
-                <a href="/users/login">Login</a>
-                <a href="/users/register">Register</a>
+    </header>
+    <div>
+        <!--main menu - navigation-->
+
+
+        <aside>
+            <div class="center">
+                <img class="logo" src="/img/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <a href="/">Main Page</a>
+                <a href="/book/all">All Books</a>
+                <form method="post" action="/book/search">
+                    <input type="text" name="criteria">
+                    <input type="submit" value="Search">
+                </form>
+                {{#if currentUser}}
+                    <a href="/book/create">Create New Book</a>
+                {{/if}}
+            </nav>
+        </aside>
+        <div id="container">
+            <header>
+                {{#if currentUser}}
+                    <span>Welcome, {{currentUser.username}}!</span>
+                    <a href="/users/logout">[Logout]</a>
+                {{else}}
+                    <a href="/users/login">Login</a>
+                    <a href="/users/register">Register</a>
+                {{/if}}
+            </header>
+            {{#if error}}
+                <h3 style="color: red;">{{error}}</h3>
             {{/if}}
-        </header>
-        {{#if error}}
-            <h3 style="color: red;">{{error}}</h3>
-        {{/if}}
-        <main>
-            {{{body}}}
-        </main>
-        <footer>
-            Book library 2019
-        </footer>
+            <main>
+                {{{body}}}
+            </main>
+            <footer>
+                Book library 2019
+            </footer>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

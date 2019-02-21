@@ -3,9 +3,6 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /*
-    border: 1px solid black;
-    */
 }
 
 a {
@@ -19,7 +16,6 @@ a:hover {
 
 body {
     text-align: center;
-    padding: 40px;
 }
 
 body > div {
@@ -57,7 +53,6 @@ nav > a {
 
 header {
     text-align: right;
-    padding: 10px;
 }
 
 header a {
