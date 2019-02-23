@@ -49,13 +49,13 @@
             <nav>
                 <a href="/">Main Page</a>
                 <a href="/book/all">All Books</a>
+                {{#if isAdmin}}
+                    <a href="/book/create">Create New Book</a>
+                {{/if}}
                 <form method="post" action="/book/search">
                     <input type="text" name="criteria">
                     <input type="submit" value="Search">
                 </form>
-                {{#if isAdmin}}
-                    <a href="/book/create">Create New Book</a>
-                {{/if}}
             </nav>
         </aside>
         <div id="container">
