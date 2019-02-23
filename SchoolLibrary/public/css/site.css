@@ -252,7 +252,7 @@ footer {
     transform: scale(0.95);
 }
 
-.form input[type=text],textarea, .form select, .form input[type=password], .form input[type=number] {
+.form input[type=text],textarea, .form input[type=date], .form select, .form input[type=password], .form input[type=number] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;

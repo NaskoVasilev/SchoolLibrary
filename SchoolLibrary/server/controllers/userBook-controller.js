@@ -13,13 +13,20 @@ module.exports = {
         let classNumber = body.class;
         let numberInClass = body.numberInClass;
         let returnDate = body.returnDate;
+
+        let date = new Date(returnDate)
+        if(date < Date.now()){
+            res.render('admin/giveBook', {error: 'The return date can not be in the past!'})
+            return
+        }
+
         let targetUser;
         try {
             let users = await User.find({username: username, class: classNumber, numberInClass: numberInClass});
             targetUser = users[0];
         } catch (err) {
-            console.log("There is no such user in the database");
-            return;
+            res.render('admin/giveBook', {error: 'There is no such user in the database!'})
+            return
         }
 
         if (!targetUser) {
@@ -86,8 +93,8 @@ module.exports = {
             let bookUserPromise = BookUser.find({userId: targetUser.id, bookId: bookId})
             let targetBookPromise = Book.findById(bookId);
 
-            let result = await Promise.all(bookUserPromise, targetBookPromise);
-            let bookUser = result[0];
+            let result = await Promise.all([bookUserPromise, targetBookPromise]);
+            let bookUser = result[0][0];
             let targetBook = result[1];
 
             bookUser.isReturned = true;
@@ -98,6 +105,7 @@ module.exports = {
             let userSave = User.findByIdAndUpdate(targetUser.id, {$set: targetUser});
 
             await Promise.all([bookUserSave, targetBookSave, userSave])
+            res.redirect('/book/all')
         } catch (err) {
             console.log(err.message)
             res.render('admin/returnBook', {error: 'Error occur try again!'})
