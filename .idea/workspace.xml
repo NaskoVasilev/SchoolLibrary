@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c0a9f76c-0ac2-49c9-a309-03f2a9a10d67" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/SchoolLibrary/server/controllers/userBook-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolLibrary/server/controllers/userBook-controller.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SchoolLibrary/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userBook-controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SchoolLibrary/server/controllers/userBook-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="95" column="51" lean-forward="true" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SchoolLibrary/server/controllers/userBook-controller.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/SchoolLibrary/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/accepts/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/append-field/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/array-flatten/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/asap/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/bluebird/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/bson/browser_build/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/bson/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/buffer-from/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/buffer-shims/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/busboy/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/busboy/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/busboy/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/busboy/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/concat-stream/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/content-disposition/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/cookie-parser/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/cookie-signature/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/cookie/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/crc/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/define-properties/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/destroy/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/dicer/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/dicer/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/dicer/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/dicer/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/es6-promise/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/escape-html/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/etag/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/express-handlebars/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/express-session/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/express/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/express/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/express/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/finalhandler/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/finalhandler/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/finalhandler/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/forwarded/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/fresh/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/function-bind/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/graceful-fs/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/handlebars/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/has-symbols/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/hooks-fixed/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/ipaddr.js/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/jquery/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/kareem/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/merge-descriptors/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/methods/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mkdirp/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongodb-core/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongodb/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/aggregate/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/express/connection-sharing/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/geospatial/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/lean/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/mapreduce/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/promises/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/querybuilder/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/examples/replicasets/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/node_modules/async/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mongoose/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mpath/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mpromise/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mquery/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mquery/node_modules/sliced/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/mquery/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/multer/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/muri/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/negotiator/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/object-keys/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/object.assign/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/on-finished/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/on-headers/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/optimist/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/parseurl/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/passport-local/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/passport-strategy/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/passport/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/path-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/pause/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/promise/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/random-bytes/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/regexp-clone/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/require_optional/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/require_optional/test/nestedTest/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/resolve-from/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/send/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/sliced/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/streamsearch/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/typedarray/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/uglify-js/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/uid-safe/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/wordwrap/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/node_modules/xtend/package.json" />
+      <path value="$PROJECT_DIR$/SchoolLibrary/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-8" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SchoolLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="SchoolLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/SchoolLibrary" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0a9f76c-0ac2-49c9-a309-03f2a9a10d67" name="Default" comment="" />
+      <created>1550941455351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550941455351</updated>
+      <workItem from="1550941468063" duration="2564000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2564000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19472913" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3608903" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SchoolLibrary/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolLibrary/server/controllers/userBook-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="95" column="51" lean-forward="true" selection-start-line="95" selection-start-column="51" selection-end-line="95" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

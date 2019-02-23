@@ -60,7 +60,6 @@ module.exports = {
         let username = body.username;
         let classNumber = body.class;
         let numberInClass = body.numberInClass;
-        console.log(body)
 
         let targetUser;
         try {
@@ -91,13 +90,16 @@ module.exports = {
             let bookUser = result[0];
             let targetBook = result[1];
 
-            let bookUserSave = bookUser.isReturned = true;
-            let targetBookSave = targetBook.isTaken = false;
+            bookUser.isReturned = true;
+            let bookUserSave = bookUser.save();
+            targetBook.isTaken = false;
+            let targetBookSave = targetBook.save();
             targetUser.takenBooks.splice(index, 1);
-            let userSave = targetUser.save();
+            let userSave = User.findByIdAndUpdate(targetUser.id, {$set: targetUser});
 
             await Promise.all([bookUserSave, targetBookSave, userSave])
         } catch (err) {
+            console.log(err.message)
             res.render('admin/returnBook', {error: 'Error occur try again!'})
         }
     }
