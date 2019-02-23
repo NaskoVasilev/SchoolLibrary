@@ -22,6 +22,7 @@
                             <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
                             {{#if isAdmin}}
                                 <li class="has-sub"><a href="/admin/get/user/books"><span>Find user</span></a></li>
+                                <li class="has-sub"><a href="/book/create">Create New Book</a></li>
                             {{/if}}
                         </ul>
                     </li>
@@ -31,51 +32,37 @@
                     <li><span>Welcome, {{currentUser.username}}!</span></li>
                     <li><a href="/users/logout">Logout</a></li>
                 {{else}}
+
                     <li><a href="/users/login">Login</a></li>
                     <li><a href="/users/register">Register</a></li>
                 {{/if}}
+                <li><a href="/book/all">Books</a></li>
+                <li id="search-from">
+                    <form method="post" action="/book/search">
+                        <input type="submit" value="Search">
+                        <input type="text" name="criteria">
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
-    <div>
-        <!--main menu - navigation-->
-
-
-        <aside>
-            <div class="center">
-                <img class="logo" src="/img/logo.png" alt="logo">
+    <div id="container">
+        {{#if error}}
+            <div id="errorBox">
+                <h3>{{error}}</h3>
             </div>
-
-            <nav>
-                <a href="/">Main Page</a>
-                <a href="/book/all">All Books</a>
-                {{#if isAdmin}}
-                    <a href="/book/create">Create New Book</a>
-                {{/if}}
-                <form method="post" action="/book/search">
-                    <input type="text" name="criteria">
-                    <input type="submit" value="Search">
-                </form>
-            </nav>
-        </aside>
-        <div id="container">
-            {{#if error}}
-               <div id="errorBox">
-                   <h3>{{error}}</h3>
-               </div>
-            {{/if}}
-            {{#if info}}
-                <div id="infoBox">
-                    <h3>{{info}}</h3>
-                </div>
-            {{/if}}
-            <main>
-                {{{body}}}
-            </main>
-            <footer>
-                Book library 2019
-            </footer>
-        </div>
+        {{/if}}
+        {{#if info}}
+            <div id="infoBox">
+                <h3>{{info}}</h3>
+            </div>
+        {{/if}}
+        <main>
+            {{{body}}}
+        </main>
+        <footer>
+            Book library 2019
+        </footer>
     </div>
 </body>
 </html>

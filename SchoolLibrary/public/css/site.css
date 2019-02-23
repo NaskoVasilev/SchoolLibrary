@@ -19,15 +19,7 @@ body {
 }
 
 body > div {
-    text-align: left;
-    display: inline-block;
-    clear: both;
-}
-
-aside {
-    width: 200px;
-    float: left;
-    padding: 20px;
+    text-align: center;
 }
 
 .center {
@@ -39,115 +31,16 @@ aside {
     height: 128px;
 }
 
-#container {
-    float: left;
-    width: 800px;
-    border-left: 1px solid #5d89a1;
-    border-right: 1px solid #5d89a1;
-}
-
-nav > a {
-    display: block;
-    margin: 10px 0px;
-}
-
-header {
-    text-align: right;
-}
-
-header a {
-    margin: 0px 10px;
-}
-
-main {
-    padding: 20px;
-    float: left;
-    width: 100%;
-}
-
-h1 {
-    padding: 20px;
-    background-color: #5d89a1;
-    color: white;
-}
-
-h2 {
-    padding: 10px 20px;
-    background-color: #b6cedb;
-}
-
-h3 {
-    margin-bottom: 10px;
-}
-
-section {
-    padding: 20px 10px;
-}
-
-#featured, #recent {
-    float: left;
-    width: 50%;
-}
-
 article {
     padding: 20px;
-}
-
-.controls {
-    float: right;
-    display: inline-block;
-    margin: 10px 0px;
 }
 
 .controls a{
     margin-right: 10px;
 }
 
-ul {
-    padding: 10px;
-    list-style-type: none;
-}
-
-ul>li {
-    margin: 10px 0px;
-}
-
-section::after {
-    clear: both;
-}
-
-input {
-    display: block;
-    margin: 10px 0px;
-    padding: 5px;
-}
-
 .title {
     width: 100%;
-}
-
-input[type=submit] {
-    padding: 5px 10px;
-}
-
-label {
-    display: block;
-    margin-top: 20px;
-}
-
-textarea {
-    resize: vertical;
-    width: 100%;
-    min-height: 300px;
-}
-
-.spacer {
-    padding: 20px;
-}
-
-h2 a {
-    float: right;
-    font-size: 0.75em;
 }
 
 article>p {
@@ -159,10 +52,8 @@ article>p {
 }
 
 footer {
-    clear: both;
     text-align: center;
-    margin: 20px;
-    padding: 20px;
+    padding: 10px;
     background-color: #5d89a1;
     color: white;
 }
@@ -399,7 +290,7 @@ input[type = file] + label:hover {
 }
 
 #taken-books th{
-    background: #5bf2ff;
+    background: #aeffee;
     padding: 10px;
     text-transform: uppercase;
 }
@@ -407,16 +298,21 @@ input[type = file] + label:hover {
 #taken-books table{
     margin: 0 auto;
     color: black;
-    font-weight: bold;
+    width: 70%;
 }
 
-#taken-books *{
+#taken-books tr{
     border: 1px solid black;
 }
 
 #taken-books td{
     padding: 5px;
-    text-transform: uppercase;
+}
+
+#taken-books input[type=submit]{
+    background: none;
+    border: none;
+    font-size: 15px;
 }
 
 #taken-books tr:nth-child(even){
@@ -445,4 +341,111 @@ div#errorBox{
     color: red;
     text-align: center;
     padding-top: 20px;
+}
+
+/*Home page*/
+#home{
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    height: 600px
+}
+
+#home > h1{
+    font-size: 50px;
+    color: #4d4151;
+    padding-top: 100px;
+}
+
+#home > p{
+    padding: 50px;
+    font-size: 30px;
+    color: #4d4151;
+}
+
+#home > img{
+    width: 100px;
+    height: 100px;
+}
+
+#search-from{
+    padding-top: 5px;
+    margin: 0 20px;
+}
+
+#search-from form > input[type=text]{
+    background:  none;
+    border: 1px solid green;
+    color: white;
+    padding: 5px;
+}
+
+#search-from input[type=submit]{
+    background: green;
+    padding: 5px;
+    border: 1px solid #fffdfd;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+}
+
+#search-from:hover{
+    background: #1E1E1E;
+}
+
+#all-books h2{
+    margin: 20px;
+}
+
+#all-books .spacer{
+    text-align: center;
+}
+
+.book-info h3{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.spacer article{
+    padding: 0;
+    width: 20%;
+    display: inline-block;
+    box-shadow: 0 4px 32px 0 rgba(125,168,161,1);
+    margin: 20px;
+    text-align: left;
+}
+
+.spacer article img{
+    width: 100%;
+}
+
+.spacer .book-info{
+    padding-left: 15px;
+}
+
+h2{
+    padding-top: 20px;
+}
+
+.button-container{
+    text-align: center;
+}
+
+.green{
+    background: green;
+}
+.spacer article{
+    padding-bottom: 20px;
+}
+
+.button-container{
+    padding-top: 10px;
+}
+
+#userInfo{
+    padding-top: 20px;
+    border-bottom: 1px solid green;
+    font-weight:  bold;
+    color: #3fa338;
+    padding-bottom: 20px;
+    font-size: 20px;
 }

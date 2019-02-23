@@ -1,35 +1,36 @@
-<div>
-    <p>
+<section>
+    <div id="userInfo">
         Books of {{user.firstName}} {{user.lastName}} form {{user.class}} class,
         number: {{user.numberInClass}} with username: {{user.username}}
-    </p>
-</div>
-<div id="taken-books">
-    <table>
-        {{#if hasNotBooks}}
-            <p>There are no books</p>
-        {{else}}
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Publisher</th>
-                <th>Buttons</th>
-            </tr>
-        {{/if}}
-        {{#each books}}
-            <tr>
-                <td>{{title}}</td>
-                <td>{{author}}</td>
-                <td>{{publisher}}</td>
-                <td>
-                    <form action="/user/book/return/{{_id}}" method="post">
-                        <input type="hidden" name = "username" value="{{../user.username}}">
-                        <input type="hidden" name = "class" value="{{../user.class}}">
-                        <input type="hidden" name = "numberInClass" value="{{../user.numberInClass}}">
-                        <input type="submit" value="Return">
-                    </form>
-                </td>
-            </tr>
-        {{/each}}
-    </table>
-</div>
+    </div>
+    <div id="taken-books">
+        <table>
+            {{#if hasNotBooks}}
+                <p>There are no books</p>
+            {{else}}
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Buttons</th>
+                </tr>
+            {{/if}}
+            {{#each books}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{publisher}}</td>
+                    <td>
+                        <form action="/user/book/return/{{_id}}" method="post">
+                            <input type="hidden" name="username" value="{{../user.username}}">
+                            <input type="hidden" name="class" value="{{../user.class}}">
+                            <input type="hidden" name="numberInClass" value="{{../user.numberInClass}}">
+                            <input type="submit" value="Return">
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+
+</section>
