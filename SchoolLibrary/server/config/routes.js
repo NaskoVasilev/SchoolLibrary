@@ -12,11 +12,10 @@ module.exports = (app) => {
     app.post('/users/login', controllers.users.loginPost);
     app.get('/users/logout', controllers.users.logout);
 
-    app.get('/book/create', auth.isAuthenticated, controllers.book.createGet)
-    app.post('/book/create',upload.single('image'), auth.isAuthenticated, controllers.book.createPost)
-    app.get('/book/all',controllers.book.getAll)
-    app.get('/book/details/:id',controllers.book.bookDetails)
-    //
+    app.get('/book/create', upload.single('image'), auth.isAuthenticated, controllers.book.createGet)
+    app.post('/book/create', auth.isAuthenticated,upload.single('image'), controllers.book.createPost)
+    app.get('/book/all',controllers.book.getAll);
+    app.get('/book/details/:id',controllers.book.bookDetails);
     app.get('/book/edit/:id',auth.isAuthenticated,controllers.book.editGet);
     app.post('/book/edit/:id',auth.isAuthenticated,controllers.book.editPost);
 
@@ -30,6 +29,16 @@ module.exports = (app) => {
     app.get('/user/remove/book/read/:id', auth.isAuthenticated, controllers.book.removeFromReadBooks)
     app.get('/user/readBooks', auth.isAuthenticated, controllers.book.getReadBooks)
     app.get('/user/takenBooks', auth.isAuthenticated, controllers.book.getTakenBooks)
+
+    app.get('/user/book/giveBook/:id', auth.isInRole('Admin'), controllers.userBook.giveBook)
+    app.post('/user/book/giveBook/:id', auth.isInRole('Admin'), controllers.userBook.giveBookPost)
+
+    app.get('/user/book/return/:id', auth.isInRole('Admin'), controllers.userBook.returnBook)
+    app.post('/user/book/return/:id', auth.isInRole('Admin'), controllers.userBook.returnBookPost)
+
+    app.get('/admin/get/user/books', auth.isInRole('Admin'), controllers.admin.getTakenBooksForUser)
+    app.post('/admin/get/user/books', auth.isInRole('Admin'), controllers.admin.getTakenBooksForUserPost)
+
     // app.post('/book/search',controllers.book.search);
     app.all('*', (req, res) => {
         res.status(404)

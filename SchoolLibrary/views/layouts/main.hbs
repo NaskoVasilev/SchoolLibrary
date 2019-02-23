@@ -6,19 +6,26 @@
     <title>Book library</title>
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/dropDownMenu.css">
+    <!--<script src="../../node_modules/jquery/dist/jquery.min.js"></script>-->
+    <!--<script src="js/notify.js"></script>-->
 </head>
 
 <body>
     <header>
         <nav id="main-menu">
             <ul>
-                <li id="menu" class="active has-sub"><a href="#"><span>Mneu</span></a>
-                    <ul>
-                        <li class="has-sub"><a href="/user/takenBooks"><span>Taken books</span></a></li>
-                        <li class="has-sub"><a href="/user/favouriteBooks"><span>Favourite books</span></a></li>
-                        <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
-                    </ul>
-                </li>
+                {{#if currentUser}}
+                    <li id="menu" class="active has-sub"><a href="#"><span>Mneu</span></a>
+                        <ul>
+                            <li class="has-sub"><a href="/user/takenBooks"><span>Taken books</span></a></li>
+                            <li class="has-sub"><a href="/user/favouriteBooks"><span>Favourite books</span></a></li>
+                            <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
+                            {{#if isAdmin}}
+                                <li class="has-sub"><a href="/admin/get/user/books"><span>Find user</span></a></li>
+                            {{/if}}
+                        </ul>
+                    </li>
+                {{/if}}
                 <li><a href="/"><span>Home</span></a></li>
                 {{#if currentUser}}
                     <li><span>Welcome, {{currentUser.username}}!</span></li>
@@ -46,23 +53,21 @@
                     <input type="text" name="criteria">
                     <input type="submit" value="Search">
                 </form>
-                {{#if currentUser}}
+                {{#if isAdmin}}
                     <a href="/book/create">Create New Book</a>
                 {{/if}}
             </nav>
         </aside>
         <div id="container">
-            <header>
-                {{#if currentUser}}
-                    <span>Welcome, {{currentUser.username}}!</span>
-                    <a href="/users/logout">[Logout]</a>
-                {{else}}
-                    <a href="/users/login">Login</a>
-                    <a href="/users/register">Register</a>
-                {{/if}}
-            </header>
             {{#if error}}
-                <h3 style="color: red;">{{error}}</h3>
+               <div id="errorBox">
+                   <h3>{{error}}</h3>
+               </div>
+            {{/if}}
+            {{#if info}}
+                <div id="infoBox">
+                    <h3>{{info}}</h3>
+                </div>
             {{/if}}
             <main>
                 {{{body}}}
@@ -73,5 +78,4 @@
         </div>
     </div>
 </body>
-
 </html>

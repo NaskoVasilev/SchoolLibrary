@@ -392,3 +392,57 @@ input[type = file]:focus + label,
 input[type = file] + label:hover {
     background-color: red;
 }
+
+/*Taken books table css*/
+#taken-books{
+    margin-top: 20px;
+}
+
+#taken-books th{
+    background: #5bf2ff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#taken-books table{
+    margin: 0 auto;
+    color: black;
+    font-weight: bold;
+}
+
+#taken-books *{
+    border: 1px solid black;
+}
+
+#taken-books td{
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#taken-books tr:nth-child(even){
+    background: lightgray;
+}
+
+#taken-books tr:nth-child(odd){
+    background: #d3cf85;
+}
+
+/*Botton css*/
+.button{
+    background-color: greenyellow;
+    padding: 10px 20px;
+    border: none;
+    color: black;
+    font-size: 15px;
+}
+
+.button:hover{
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+div#errorBox{
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+}

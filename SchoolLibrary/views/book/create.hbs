@@ -2,13 +2,13 @@
     <div id="formContent">
         <h2 class="active">Add new book</h2>
 
-        <form method="post" class="form">
+        <form method="post" class="form" enctype="multipart/form-data">
             <input type="text" class="fadeIn second" name="title" value="{{title}}" placeholder="Title">
             <input type="text" class="fadeIn second" name="author" value="{{author}}" placeholder="Author">
             <input type="text" class="fadeIn second" name="genre" value="{{genre}}" placeholder="Genre">
             <input type="text" class="fadeIn third" name="publisher" value="{{publisher}}" placeholder="Publisher">
             <textarea class="fadeIn third" name="description" placeholder="Description">{{description}}</textarea>
-            <input id="file" type="file" class="fadeIn third" name="image" accept=".jpg,.jpeg,.png">
+            <input id="file" type="file" class="fadeIn third" name="image" accept=".jpg, .jpeg, .png">
             <label for="file" class="fadeIn third">Choose photo</label>
             <input type="submit" class="fadeIn fourth" value="Add">
         </form>

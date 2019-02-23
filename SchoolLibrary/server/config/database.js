@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const User = require('../models/User')
 require('../models/Book')
-//require('../models/Edit')
+require('../models/BookUser')
 
 mongoose.Promise = global.Promise
 

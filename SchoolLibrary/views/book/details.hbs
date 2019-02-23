@@ -23,6 +23,10 @@
         <div class="buttons">
             <a href="/user/add/favourite/{{_id}}">Add to Favourite</a>
             <a href="/user/add/book/read/{{_id}}">Add to read books</a>
+            {{#if isAdmin}}
+                <a href="/user/book/giveBook/{{_id}}">Give book</a>
+            {{/if}}
         </div>
+
     {{/if}}
 </div>

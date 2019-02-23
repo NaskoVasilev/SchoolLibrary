@@ -1,15 +1,17 @@
 <h1>Welcome to SoftUni Wiki!</h1>
 <section>
-    <h2>All articles</h2>
+    <h2>All available books</h2>
     <div class="spacer">
         <ul>
             {{#each books}}
                 <li>
-                    <a href="/book/details/{{_id}}">{{title}}</a>
+
                     <img src="{{image}}" alt="Book image">
                     <div>
-                        <h3>{{genre}}</h3>
-                        <h3>{{author}}</h3>
+                        <h3>Title: <a href="/book/details/{{_id}}">{{title}}</a></h3>
+                        <h3>Genre: {{genre}}</h3>
+                        <h3>Author: {{author}}</h3>
+                        <h3>Publisher: {{publisher}}</h3>
                     </div>
                 </li>
                 {{else}}

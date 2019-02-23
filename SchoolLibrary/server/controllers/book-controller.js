@@ -12,10 +12,11 @@ module.exports = {
         let title = book.title;
         let author = book.author;
         let genre = book.genre;
+        let publisher = book.publisher;
 
-        if (!title || !author || !genre || !req.file) {
+        if (!title || !author || !genre || !req.file || !publisher) {
             book.error = "Title, author, genre and image are required!";
-            res.render('book/create', book)
+            res.render('book/create', book);
             return;
         }
 
@@ -78,7 +79,7 @@ module.exports = {
             await book.save()
             res.redirect('/book/details/' + bookId)
         } catch (err) {
-            res.render('book/edit', {error: err.message})
+            res.render('book/edit', {error: 'Error occur try again!'})
         }
     },
     getAll: async (req, res) => {
@@ -113,9 +114,8 @@ module.exports = {
 
         if (index === -1) {
             req.user.favouriteBooks.push(bookId)
+            await User.findByIdAndUpdate(userId, {$set: req.user})
         }
-
-        await User.findByIdAndUpdate(userId, {$set: req.user})
         res.redirect('/book/details/' + bookId)
     },
 
