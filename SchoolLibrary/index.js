@@ -1,4 +1,4 @@
-let env = process.env.NODE_ENV || 'development'
+let env = 'production'
 
 let settings = require('./server/config/settings')[env]
 

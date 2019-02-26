@@ -1,6 +1,7 @@
 const Book = require('mongoose').model('Book');
 const User = require('mongoose').model('User');
 const BookUser = require('mongoose').model('BookUser');
+const entityHelper = require('../utilities/entityHelper')
 
 module.exports = {
     getTakenBooksForUser: (req, res)=>{
@@ -24,6 +25,9 @@ module.exports = {
             res.redirect('/', {error:'There is no such user in the database'})
             return
         }
+
+        entityHelper.addImagesToEntities(user.takenBooks);
+
         res.render('admin/takenBooks', {
             books: user.takenBooks,
             user: user,

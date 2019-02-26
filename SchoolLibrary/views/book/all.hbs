@@ -1,18 +1,20 @@
 <section id="all-books">
     <h2>All available books</h2>
     <div class="spacer">
-        <article>
-            {{#each books}}
-                <img src="{{image}}" alt="Book image">
+        {{#each books}}
+            <article class="book">
+                <figure>
+                    <img src="data:{{image.contentType}};base64,{{image.data}}" alt="Book image">
+                </figure>
                 <div class="book-info">
                     <h3>Title: <a href="/book/details/{{_id}}">{{title}}</a></h3>
                     <h3>Genre: {{genre}}</h3>
                     <h3>Author: {{author}}</h3>
                     <h3>Publisher: {{publisher}}</h3>
                 </div>
-            {{else}}
-                <h3>No books in database!</h3>
-            {{/each}}
-        </article>
+            </article>
+        {{else}}
+            <h3>No books in database!</h3>
+        {{/each}}
     </div>
 </section>

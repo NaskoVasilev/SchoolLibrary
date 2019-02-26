@@ -1,6 +1,6 @@
 const Book = require('mongoose').model('Book');
 const User = require('mongoose').model('User');
-const utilityFunctions = require('../utilities/utilFunctions')
+const entityHelper = require('../utilities/entityHelper')
 
 module.exports = {
     createGet: (req, res) => {
@@ -20,10 +20,8 @@ module.exports = {
             return;
         }
 
-        imageUrl = utilityFunctions.normaliezeImagePath(req.file.path);
-
         try {
-            book.image = imageUrl;
+            entityHelper.addBinaryFileToEntity(req, book)
             await Book.create(book)
             res.redirect('/')
         } catch (err) {
@@ -31,17 +29,11 @@ module.exports = {
             res.render('book/create', book)
         }
     },
-
-    getAll: async (req, res) => {
-        let books = await Book.find({})
-            .sort({title: 1});
-        res.render('book/all', {books})
-    },
-
     bookDetails: async (req, res) => {
         let id = req.params.id;
         try {
             let book = await Book.findById(id);
+            entityHelper.addImageToEntity(book)
             res.render('book/details', book);
         } catch (err) {
             console.log(err)
@@ -68,13 +60,12 @@ module.exports = {
             return;
         }
         try {
-            imageUrl = utilityFunctions.normaliezeImagePath(req.file.path);
             let book = await Book.findById(bookId)
             book.title = title;
             book.author = author;
             book.genre = genre;
             book.description = body.description;
-            book.image = imageUrl;
+            entityHelper.addBinaryFileToEntity(req, book);
 
             await book.save()
             res.redirect('/book/details/' + bookId)
@@ -83,7 +74,9 @@ module.exports = {
         }
     },
     getAll: async (req, res) => {
-        let books = await Book.find();
+        let books = await Book.find({isTaken: false})
+            .sort({title: 1});
+        entityHelper.addImagesToEntities(books);
         res.render('book/all', {books: books})
     },
     deleteGet: async (req, res) => {
@@ -93,7 +86,7 @@ module.exports = {
             let book = await Book.findById(id);
             res.render('book/delete', book)
         } catch (err) {
-            console.log(err.message)
+            res.redirect('/')
         }
     },
     deletePost: async (req, res) => {
@@ -103,7 +96,7 @@ module.exports = {
             await Book.findByIdAndRemove(id);
             res.redirect('/')
         } catch (err) {
-            console.log(err.message)
+            res.redirect('/')
         }
     },
 
@@ -132,6 +125,7 @@ module.exports = {
     },
     getFavouriteBooks: async (req, res) => {
         let user = await User.findById(req.user.id).populate('favouriteBooks')
+        entityHelper.addImagesToEntities(user.favouriteBooks);
         res.render('book/favouriteBooks', {books: user.favouriteBooks})
     },
     addToReadBooks: async (req, res) => {
@@ -140,7 +134,7 @@ module.exports = {
 
         let bookIndex = req.user.readBooks.indexOf(bookId)
         console.log(bookIndex)
-        if (bookIndex == -1) {
+        if (bookIndex === -1) {
             req.user.readBooks.push(bookId)
             await User.findByIdAndUpdate(userId, {$set: req.user})
         }
@@ -148,10 +142,12 @@ module.exports = {
     },
     getReadBooks: async (req, res) => {
         let user = await User.findById(req.user.id).populate('readBooks')
+        entityHelper.addImagesToEntities(user.readBooks);
         res.render('book/readBooks', {books: user.readBooks})
     },
     getTakenBooks: async (req, res) => {
         let user = await User.findById(req.user.id).populate('takenBooks')
+        entityHelper.addImagesToEntities(user.takenBooks);
         res.render('book/takenBooks', {books: user.takenBooks})
     },
     removeFromReadBooks: async (req, res) => {

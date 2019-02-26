@@ -2,8 +2,10 @@
     <h2>Read books</h2>
     <div class="spacer">
         {{#each books}}
-            <article>
-                <img src="{{image}}" alt="">
+            <article class="book">
+                <figure>
+                    <img src="data:{{image.contentType}};base64,{{image.data}}" alt="">
+                </figure>
                 <div class="book-info">
                     <h3>Author: {{author}}</h3>
                     <h3>Genre: {{genre}}</h3>

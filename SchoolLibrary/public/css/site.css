@@ -93,7 +93,6 @@ footer {
 #formContent {
     border-radius: 10px 10px 10px 10px;
     background: #fff;
-    padding: 30px;
     width: 90%;
     max-width: 450px;
     position: relative;
@@ -405,17 +404,25 @@ div#errorBox{
     font-size: 15px;
 }
 
-.spacer article{
+.spacer .book{
     padding: 0;
-    width: 20%;
+    width: 250px;
     display: inline-block;
     box-shadow: 0 4px 32px 0 rgba(125,168,161,1);
     margin: 20px;
     text-align: left;
+    height: 450px;
+    vertical-align: top;
 }
 
-.spacer article img{
+.spacer .book figure{
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.spacer .book img{
     width: 100%;
+    height: 100%;
 }
 
 .spacer .book-info{
@@ -432,9 +439,6 @@ h2{
 
 .green{
     background: green;
-}
-.spacer article{
-    padding-bottom: 20px;
 }
 
 .button-container{
