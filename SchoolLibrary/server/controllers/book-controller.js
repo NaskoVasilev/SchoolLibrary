@@ -1,6 +1,7 @@
 const Book = require('mongoose').model('Book');
 const User = require('mongoose').model('User');
-const entityHelper = require('../utilities/entityHelper')
+const entityHelper = require('../utilities/entityHelper');
+const tagsHelper = require('../utilities/tagsHelper');
 
 module.exports = {
     createGet: (req, res) => {
@@ -22,6 +23,7 @@ module.exports = {
 
         try {
             entityHelper.addBinaryFileToEntity(req, book)
+            tagsHelper.addTagsToBook(book.tags, book);
             await Book.create(book)
             res.redirect('/')
         } catch (err) {
@@ -44,6 +46,7 @@ module.exports = {
     editGet: async (req, res) => {
         let articleId = req.params.id;
         let book = await Book.findById(articleId);
+        tagsHelper.removeUnnecessaryTags(book);
         res.render('book/edit', book)
     },
 
@@ -56,7 +59,7 @@ module.exports = {
 
         if (!title || !author || !genre || !req.file) {
             body.error = "Title, author, genre and image are required!";
-            res.render('book/edit/' + bookId, body)
+            res.render('book/edit', body)
             return;
         }
         try {
@@ -65,12 +68,16 @@ module.exports = {
             book.author = author;
             book.genre = genre;
             book.description = body.description;
+            console.log(body.tags)
+            book.publisher = body.publisher;
             entityHelper.addBinaryFileToEntity(req, book);
-
-            await book.save()
-            res.redirect('/book/details/' + bookId)
+            tagsHelper.addTagsToBook(body.tags, book);
+            await book.save();
+            res.redirect('/book/details/' + bookId);
         } catch (err) {
-            res.render('book/edit', {error: 'Error occur try again!'})
+            console.log(err.message)
+            body.error = 'Error occur try again!';
+            res.render('book/edit', body);
         }
     },
     getAll: async (req, res) => {
@@ -160,13 +167,15 @@ module.exports = {
         }
 
         res.redirect('/book/details/' + bookId)
-    }
+    },
+    searchBook: async (req, res) => {
+        let tags = req.body.tags.split(',')
+            .map(t => t.toLowerCase().trim());
+        let books = await Book
+            .find({ tags: { "$in" : tags}});
 
-// search: async (req, res) => {
-//     let criteria = req.body.criteria.toLowerCase();
-//     let articles = await Article.find();
-//     let targetArticles = articles.filter(a => a.title.toLowerCase().includes(criteria))
-//
-//     res.render('book/searchResult', {articles: targetArticles, criteria: criteria})
-// }
+        entityHelper.addImagesToEntities(books);
+
+        res.render('book/all', {books: books});
+    },
 }

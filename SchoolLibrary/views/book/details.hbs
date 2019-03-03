@@ -1,32 +1,38 @@
-<h1>Welcome to SoftUni Wiki!</h1>
-<div class="spacer">
-    <h2>{{title}}
+<h1>Details</h1>
+<div class="book-details">
+    <div class="float-left">
+        <h2>{{title}}</h2>
+        <figure>
+            <img src="data:{{image.contentType}};base64,{{image.data}}" alt="">
+        </figure>
+
         <div class="controls">
             {{#if currentUser}}
                 {{#if isAdmin}}
-                    <a href="/book/edit/{{_id}}">[edit]</a>
-                    <a href="/book/delete/{{_id}}">[delete]</a>
+                    <a href="/book/edit/{{_id}}">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="/book/delete/{{_id}}">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
                 {{/if}}
             {{/if}}
-
         </div>
-    </h2>
-    <article>
-        <img src="data:{{image.contentType}};base64,{{image.data}}" alt="">
-        <div>
+    </div>
+    <div class="float-right">
+        <article>
             <h3>Author: {{author}}</h3>
             <h3>Genre: {{genre}}</h3>
-            <p>{{description}}</p>
-        </div>
-    </article>
-    {{#if currentUser}}
-        <div class="buttons">
-            <a href="/user/add/favourite/{{_id}}">Add to Favourite</a>
-            <a href="/user/add/book/read/{{_id}}">Add to read books</a>
-            {{#if isAdmin}}
-                <a href="/user/book/giveBook/{{_id}}">Give book</a>
-            {{/if}}
-        </div>
-
-    {{/if}}
+            <p>Description: {{description}}</p>
+        </article>
+        {{#if currentUser}}
+            <div class="buttons">
+                <a href="/user/add/favourite/{{_id}}" class="green button">Add to Favourite</a>
+                <a href="/user/add/book/read/{{_id}}" class="blue button">Add to read books</a>
+                {{#if isAdmin}}
+                    <a href="/user/book/giveBook/{{_id}}" class="green button">Give book</a>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
 </div>

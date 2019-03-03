@@ -17,7 +17,7 @@ module.exports = (app) => {
     app.get('/book/all',controllers.book.getAll);
     app.get('/book/details/:id',controllers.book.bookDetails);
     app.get('/book/edit/:id',auth.isAuthenticated,controllers.book.editGet);
-    app.post('/book/edit/:id',auth.isAuthenticated,controllers.book.editPost);
+    app.post('/book/edit/:id', upload.single('image'), auth.isAuthenticated,controllers.book.editPost);
 
     app.get('/book/delete/:id', auth.isAuthenticated, controllers.book.deleteGet)
     app.post('/book/delete/:id', auth.isAuthenticated, controllers.book.deletePost)
@@ -38,8 +38,15 @@ module.exports = (app) => {
 
     app.get('/admin/get/user/books', auth.isInRole('Admin'), controllers.admin.getTakenBooksForUser)
     app.post('/admin/get/user/books', auth.isInRole('Admin'), controllers.admin.getTakenBooksForUserPost)
+    app.get('/admin/takenBooks', auth.isInRole('Admin'), controllers.admin.getTakenBooks)
+    app.get('/admin/expiredBooks', auth.isInRole('Admin'), controllers.admin.getAllExpiredBooks)
+    app.post('/admin/notify/user/:userId', auth.isInRole('Admin'), controllers.admin.notifyUser)
+    app.get('/admin/notifyUser', auth.isInRole('Admin'), controllers.admin.notifyUserGet)
+    app.post('/admin/notifyUser', auth.isInRole('Admin'), controllers.admin.notifyUserPost)
 
-    // app.post('/book/search',controllers.book.search);
+    app.get('/user/notification/all', auth.isAuthenticated, controllers.notification.getNotificationsByUser)
+    app.get('/user/notification/delete/:id', auth.isAuthenticated, controllers.notification.deleteNotification)
+    app.post('/book/search',controllers.book.searchBook);
     app.all('*', (req, res) => {
         res.status(404)
         res.send('404 Not Found!')

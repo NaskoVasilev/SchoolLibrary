@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
 * {
     padding: 0px;
     margin: 0px;
@@ -453,3 +455,112 @@ h2{
     padding-bottom: 20px;
     font-size: 20px;
 }
+
+/*Notification*/
+#notifications h2{
+    text-align: center;
+}
+
+#notifications article{
+    width: 95%;
+    margin: 10px auto;
+    border: 2px solid lightgray;
+    background-color: #fff6ef;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#notifications article p{
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#notifications article a{
+    float: right;
+}
+#latest-books{
+    background-color: #ebe6ee;
+}
+
+#latest-books article{
+    background-color: white;
+}
+
+/*Book details*/
+.book-details{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.book-details .float-left h2{
+    font-size: 30px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.book-details .float-left .controls{
+    padding-top: 10px;
+}
+
+.book-details .float-left .controls a{
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.book-details .float-left .controls a:hover{
+    color: #74ad1f;
+}
+
+.book-details .float-right{
+    padding-left: 30px;
+}
+
+.book-details .float-right .buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-details .float-right .buttons a{
+    margin-bottom: 20px;
+}
+
+.book-details .float-right article{
+    line-height: 35px;
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+
+.button{
+    color: black;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.button:hover{
+    color: white;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: #40b7ff
+}
+
+.yellow{
+    background-color: greenyellow;
+}
+

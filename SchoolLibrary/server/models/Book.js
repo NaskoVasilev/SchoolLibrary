@@ -6,6 +6,7 @@ let bookSchema = new mongoose.Schema({
     publisher: {type: String, required: "Publisher is required!"},
     description: {type: String},
     genre: {type: String, required: "Genre is required!"},
+    tags: [{type: String}],
     image: {data: mongoose.Schema.Types.Buffer, contentType: String},
     isTaken: {type: mongoose.Schema.Types.Boolean, default: false}
 })

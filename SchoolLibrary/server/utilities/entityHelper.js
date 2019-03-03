@@ -17,8 +17,22 @@ let addImagesToEntities = (entities) =>{
     }
 }
 
+let populateBookUserEntities = (entities) =>{
+    for (const bookUser of entities) {
+        bookUser.title = bookUser.bookId.title;
+        bookUser.author = bookUser.bookId.author;
+        bookUser.publisher = bookUser.bookId.publisher;
+        bookUser.username = bookUser.userId.username;
+        bookUser.class = bookUser.userId.class;
+        bookUser.numberInClass = bookUser.userId.numberInClass;
+        bookUser.date = bookUser.returnDate.toDateString();
+        bookUser.userId = bookUser.userId._id;
+    }
+}
+
 module.exports = {
     addBinaryFileToEntity,
     addImageToEntity,
-    addImagesToEntities
+    addImagesToEntities,
+    populateBookUserEntities
 }

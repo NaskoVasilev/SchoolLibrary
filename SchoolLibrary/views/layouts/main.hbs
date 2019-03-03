@@ -17,12 +17,17 @@
                 {{#if currentUser}}
                     <li id="menu" class="active has-sub"><a href="#"><span>Mneu</span></a>
                         <ul>
-                            <li class="has-sub"><a href="/user/takenBooks"><span>Taken books</span></a></li>
-                            <li class="has-sub"><a href="/user/favouriteBooks"><span>Favourite books</span></a></li>
-                            <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
                             {{#if isAdmin}}
                                 <li class="has-sub"><a href="/admin/get/user/books"><span>Find user</span></a></li>
                                 <li class="has-sub"><a href="/book/create">Create New Book</a></li>
+                                <li class="has-sub"><a href="/admin/takenBooks">Taken books</a></li>
+                                <li class="has-sub"><a href="/admin/expiredBooks">Expired books</a></li>
+                                <li class="has-sub"><a href="/admin/notifyUser">Notify user</a></li>
+                            {{else}}
+                                <li class="has-sub"><a href="/user/takenBooks"><span>Taken books</span></a></li>
+                                <li class="has-sub"><a href="/user/favouriteBooks"><span>Favourite books</span></a></li>
+                                <li class="has-sub"><a href="/user/readBooks"><span>Read books</span></a></li>
+                                <li><a href="/user/notification/all">Notifications</a></li>
                             {{/if}}
                         </ul>
                     </li>
@@ -32,7 +37,6 @@
                     <li><span>Welcome, {{currentUser.username}}!</span></li>
                     <li><a href="/users/logout">Logout</a></li>
                 {{else}}
-
                     <li><a href="/users/login">Login</a></li>
                     <li><a href="/users/register">Register</a></li>
                 {{/if}}
@@ -40,7 +44,7 @@
                 <li id="search-from">
                     <form method="post" action="/book/search">
                         <input type="submit" value="Search">
-                        <input type="text" name="criteria">
+                        <input type="text" name="tags">
                     </form>
                 </li>
             </ul>
@@ -60,9 +64,9 @@
         <main>
             {{{body}}}
         </main>
-        <footer>
-            Book library 2019
-        </footer>
+        <!--<footer>-->
+            <!--Book library 2019-->
+        <!--</footer>-->
     </div>
 </body>
 </html>

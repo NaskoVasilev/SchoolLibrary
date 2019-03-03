@@ -1,0 +1,41 @@
+<section>
+    <h2>{{heading}}</h2>
+    <div id="taken-books">
+        <table>
+            {{#if hasNotBooks}}
+                <p>There are no books</p>
+            {{else}}
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Username</th>
+                    <th>Class</th>
+                    <th>Number in class</th>
+                    <th>Return date</th>
+                    <th>Buttons</th>
+                </tr>
+            {{/if}}
+            {{#each booksUsers}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{publisher}}</td>
+                    <td>{{username}}</td>
+                    <td>{{class}}</td>
+                    <td>{{numberInClass}}</td>
+                    <td>{{date}}</td>
+                    <td>
+                        <form action="/admin/notify/user/{{userId}}" method="post">
+                            <input type="hidden" name="title" value="{{title}}">
+                            <input type="hidden" name="author" value="{{author}}">
+                            <input type="hidden" name="publisher" value="{{publisher}}">
+                            <input type="submit" value="Return">
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+
+</section>

@@ -1,5 +1,6 @@
 const encryption = require('../utilities/encryption')
 const User = require('mongoose').model('User')
+const notificationController = require('./notification-controller')
 
 module.exports = {
     registerGet: (req, res) => {
@@ -66,9 +67,12 @@ module.exports = {
                     res.redirect('users/login')
                     return;
                 }
+
                 res.redirect('/')
             })
         })
+
+        notificationController.addUserNotification(reqUser)
     },
     logout: (req, res) => {
         req.logout()
