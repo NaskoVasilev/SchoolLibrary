@@ -353,19 +353,23 @@ div#errorBox{
 
 #home > h1{
     font-size: 50px;
-    color: #4d4151;
+    color: #ffffff;
     padding-top: 100px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 #home > p{
     padding: 50px;
-    font-size: 30px;
-    color: #4d4151;
+    font-size: 45px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 #home > img{
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
 }
 
 #search-from{
