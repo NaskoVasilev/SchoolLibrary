@@ -43,6 +43,7 @@ module.exports = (app) => {
     app.post('/admin/notify/user/:userId', auth.isInRole('Admin'), controllers.admin.notifyUser)
     app.get('/admin/notifyUser', auth.isInRole('Admin'), controllers.admin.notifyUserGet)
     app.post('/admin/notifyUser', auth.isInRole('Admin'), controllers.admin.notifyUserPost)
+    app.get('/admin/users', auth.isInRole('Admin'), controllers.admin.getAllUsers)
 
     app.get('/user/notification/all', auth.isAuthenticated, controllers.notification.getNotificationsByUser)
     app.get('/user/notification/delete/:id', auth.isAuthenticated, controllers.notification.deleteNotification)

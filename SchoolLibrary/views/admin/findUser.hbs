@@ -3,10 +3,10 @@
         <div id="formContent">
             <h2 class="active">Find user</h2>
 
-            <form method="post" class="form">
-                <input type="text" class="fadeIn second" name="username" placeholder="Username">
-                <input type="number" class="fadeIn second" name="class" placeholder="Class">
-                <input type="text" class="fadeIn second" name="numberInClass" placeholder="Number in class">
+            <form method="post" class="form" action="/admin/get/user/books">
+                <input type="text" class="fadeIn second" name="username" placeholder="Username" value="{{username}}">
+                <input type="number" class="fadeIn second" name="class" placeholder="Class" value="{{class}}">
+                <input type="text" class="fadeIn second" name="numberInClass" placeholder="Number in class" value="{{numberInClass}}">
                 <input type="submit" class="fadeIn fourth" value="Get user books">
             </form>
         </div>

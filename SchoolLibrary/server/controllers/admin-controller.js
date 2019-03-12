@@ -22,6 +22,11 @@ module.exports = {
             }).populate('takenBooks')
 
             user = users[0];
+
+            if(!user){
+                res.render('admin/findUser', {error: 'There is no such user!'})
+            }
+
         } catch (err) {
             res.redirect('/', {error: 'There is no such user in the database'})
             return
@@ -109,4 +114,11 @@ module.exports.notifyUserPost = async (req, res) => {
         content: body.message
     })
     res.redirect('/');
+}
+
+module.exports.getAllUsers = (req, res) =>{
+    User.find({ roles: { "$nin" : ["Admin"]}})
+        .then(users => {
+            res.render('admin/users', {users: users});
+        })
 }

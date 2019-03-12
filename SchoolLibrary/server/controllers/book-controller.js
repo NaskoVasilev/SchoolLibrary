@@ -1,5 +1,6 @@
 const Book = require('mongoose').model('Book');
 const User = require('mongoose').model('User');
+const BookUser = require('mongoose').model('BookUser');
 const entityHelper = require('../utilities/entityHelper');
 const tagsHelper = require('../utilities/tagsHelper');
 
@@ -128,7 +129,7 @@ module.exports = {
             await User.findByIdAndUpdate(userId, {$set: req.user})
         }
 
-        res.redirect('/book/details/' + bookId)
+        res.redirect('/user/favouriteBooks')
     },
     getFavouriteBooks: async (req, res) => {
         let user = await User.findById(req.user.id).populate('favouriteBooks')
@@ -155,6 +156,16 @@ module.exports = {
     getTakenBooks: async (req, res) => {
         let user = await User.findById(req.user.id).populate('takenBooks')
         entityHelper.addImagesToEntities(user.takenBooks);
+
+        for (const book of user.takenBooks) {
+            let bookUser = await BookUser.find({
+                bookId: book.id,
+                userId: req.user.id
+            });
+
+            book.date = bookUser[0].returnDate.toDateString();
+        }
+
         res.render('book/takenBooks', {books: user.takenBooks})
     },
     removeFromReadBooks: async (req, res) => {
@@ -166,7 +177,7 @@ module.exports = {
             await User.findByIdAndUpdate(userId, {$set: req.user})
         }
 
-        res.redirect('/book/details/' + bookId)
+        res.redirect('/user/readBooks')
     },
     searchBook: async (req, res) => {
         let tags = req.body.tags.split(',')

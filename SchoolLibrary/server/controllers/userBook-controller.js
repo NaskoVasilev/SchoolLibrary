@@ -85,7 +85,7 @@ module.exports = {
         let index = targetUser.takenBooks.indexOf(bookId)
         if (index === -1) {
             console.log("The selected user did not take such a book")
-            res.render('admin/returnBook', {error: 'The selected user did not take such a book'})
+            res.render('admin/returnBook', {error: 'The selected user did not take books!'})
             return;
         }
 
@@ -105,7 +105,8 @@ module.exports = {
             let userSave = User.findByIdAndUpdate(targetUser.id, {$set: targetUser});
 
             await Promise.all([bookUserSave, targetBookSave, userSave])
-            res.redirect('/book/all')
+            //res.redirect('/book/all')
+            res.render('admin/findUser', targetUser)
         } catch (err) {
             console.log(err.message)
             res.render('admin/returnBook', {error: 'Error occur try again!'})

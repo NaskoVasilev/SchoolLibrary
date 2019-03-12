@@ -291,15 +291,17 @@ input[type = file] + label:hover {
 }
 
 #taken-books th{
-    background: #aeffee;
+    background: #3FA338;
     padding: 10px;
     text-transform: uppercase;
+    border: 1px solid black;
 }
 
 #taken-books table{
     margin: 0 auto;
     color: black;
     width: 70%;
+    border-collapse: collapse;
 }
 
 #taken-books tr{
@@ -308,6 +310,7 @@ input[type = file] + label:hover {
 
 #taken-books td{
     padding: 5px;
+    border: 1px solid black;
 }
 
 #taken-books input[type=submit]{
@@ -317,11 +320,16 @@ input[type = file] + label:hover {
 }
 
 #taken-books tr:nth-child(even){
-    background: lightgray;
+    background: #b3f554;
 }
 
 #taken-books tr:nth-child(odd){
-    background: #d3cf85;
+    background: #3FA338;
+    color: white;
+}
+
+#taken-books tr:nth-child(odd) input[type=submit]{
+    color: white;
 }
 
 /*Botton css*/
@@ -406,7 +414,6 @@ div#errorBox{
 }
 
 .book-info h3{
-    padding: 5px;
     font-size: 15px;
 }
 
@@ -417,7 +424,7 @@ div#errorBox{
     box-shadow: 0 4px 32px 0 rgba(125,168,161,1);
     margin: 20px;
     text-align: left;
-    height: 450px;
+    height: 470px;
     vertical-align: top;
 }
 
@@ -433,6 +440,8 @@ div#errorBox{
 
 .spacer .book-info{
     padding-left: 15px;
+    line-height: 25px;
+    margin-bottom: 10px;
 }
 
 h2{
@@ -441,10 +450,11 @@ h2{
 
 .button-container{
     text-align: center;
+    vertical-align: bottom;
 }
 
-.green{
-    background: green;
+.button-container a:hover{
+    background-color: deepskyblue;
 }
 
 .button-container{
@@ -493,15 +503,34 @@ h2{
 
 /*Book details*/
 .book-details{
-    display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+
+.book-details .float-right{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.book-details .float-left{
+    display: inline-block;
+    width: 30%;
 }
 
 .book-details .float-left h2{
     font-size: 30px;
     border-bottom: 1px solid #000000;
     margin-bottom: 20px;
+    width: 90%;
+}
+
+.book-details .float-left figure{
+    width: 90%;
+}
+
+.book-details .float-left img{
+    width: 90%;
 }
 
 .book-details .float-left .controls{
@@ -520,6 +549,8 @@ h2{
 
 .book-details .float-right{
     padding-left: 30px;
+    display: inline-block;
+    width: 40%;
 }
 
 .book-details .float-right .buttons{
@@ -529,6 +560,11 @@ h2{
 
 .book-details .float-right .buttons a{
     margin-bottom: 20px;
+    width: 220px;
+}
+
+.book-details .float-right .buttons a:hover{
+    background-color: #3FA338;
 }
 
 .book-details .float-right article{
@@ -553,7 +589,7 @@ h2{
 }
 
 .green{
-    background-color: green;
+    background-color: #3FA338;
 }
 
 .red{
@@ -566,5 +602,9 @@ h2{
 
 .yellow{
     background-color: greenyellow;
+}
+
+input[type=submit]{
+    outline: none;
 }
 
