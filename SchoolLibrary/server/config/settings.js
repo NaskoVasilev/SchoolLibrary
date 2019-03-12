@@ -13,7 +13,7 @@ module.exports = {
   production: 
   {
 	rootPath: rootPath,
-    db: 'mongodb://admin:l1brary@ds123136.mlab.com:23136/school-library',
+    db: 'mongodb://localhost:27017/BookLibrary',
     port: process.env.PORT || 8000
   }
 }
